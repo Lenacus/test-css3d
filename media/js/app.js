@@ -1,19 +1,35 @@
+var Game = {};
 
-$(document).ready(function(){
+$(function(){
 
-    var Game = {};
+    //requestAnimationFrame
+
+
 
     Game.fps = 25;
 
     Game.ang = 0;
 
-    Game.run = function() {
-        //console.info('Game Update');
+    function animloop() {
+        render();
+    }
+
+    function render() {
         Game.ang++;
         $('#flip').css('transform', 'rotateZ(' + Game.ang + 'deg)')
-    };
+    }
 
-    Game._intervalId = setInterval(Game.run, 1000 / Game.fps);
+
+    window.requestAnimFrame = (function(){
+        return  window.requestAnimationFrame   ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            function(callback){
+                window.setTimeout(callback, 1000 / Game.fps);
+            };
+    })();
+
+    requestAnimFrame(animloop);
 
     console.info('Game loaded', Game);
 
