@@ -1,0 +1,44 @@
+#wrapper {
+    position: relative;
+    margin: 100px auto 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    perspective: 800px;
+}
+
+#flipcontainer {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transform: rotateX(75deg);
+    transform-origin: 0px 0px;
+    top: 250px;
+    left: 250px;
+}
+
+#flip {
+    position: absolute;
+    background: transparent url('/media/image') 0px 0px no-repeat;
+    width: 500px;
+    height: 500px;
+    display: block;
+    border: 1px solid grey;
+    top: -111px;
+    left: -54px;
+    transform: rotateZ(245deg);
+    transform-origin: 54px 111px;
+}
+
+figure {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, .75);
+    margin: 0;
+    top: 170px;
+    left: 50%;
+    margin-left: -50px;
+    border: 1px solid cyan;
+}
