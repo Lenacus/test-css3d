@@ -4,8 +4,8 @@
     left: 10px;
     display: block;
     border: 1px solid black;
-    width: 204px;
-    height: 204px;
+    width: 205px;
+    height: 205px;
     color: #ffffff;
     background: transparent url('/media/image/road.png');
     background-size: contain;
@@ -15,7 +15,7 @@
     position: absolute;
     display: block;
     width: 1px;
-    height: 204px;
+    height: 205px;
     background-color: cyan;
     left: 0px;
 }
@@ -24,7 +24,7 @@
 #debug #axey {
     position: absolute;
     display: block;
-    width: 204px;
+    width: 205px;
     height: 1px;
     background-color: cyan;
     top: 0px;

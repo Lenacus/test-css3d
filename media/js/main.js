@@ -73,12 +73,20 @@
     window.game.renderer = {
 
         player: function() {
+
+            // Move map
             $('#flip')
                 .css({
                     left: -window.game.player.x,
                     top: -window.game.player.y,
                     'transform-origin': window.game.player.x + 'px ' + window.game.player.y + 'px'
                 });
+
+            // Move debug axe
+            $('#axex').css('left', (window.game.player.x / 5));
+            $('#axey').css('top', (window.game.player.y / 5));
+
+
         }
 
     }
